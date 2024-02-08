@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+
+.main {
+  width: 100%;
+  padding: 2em;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+.heading {
+  text-align: center;
+}
+.heading__title {
+  margin: 1.5em 0 1em;
+  font-size: 3.8rem;
+  color: var(--very-dark-magenta);
+}
+.heading__text {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: var(--dark-grayish-magenta);
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+  text-align: center;
+}
+.reviews__box {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  font-size: 1.6rem;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 8px;
+}
+.reviews__box-stars {
+  margin-bottom: 0.5em;
+}
+.reviews__box-stars-item {
+  margin-left: 0.2em;
+}
+.reviews__box-stars-item:first-child {
+  margin-left: 0;
+}
+.reviews__box-text {
+  color: var(--very-dark-magenta);
+}
+
+.opinions__box {
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: var(--very-dark-magenta);
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.opinions__box-customer {
+  display: flex;
+  flex-direction: row;
+}
+.opinions__box-customer-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.opinions__box-customer-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+}
+.opinions__box-customer-name {
+  margin-bottom: 0.4em;
+  color: var(--white);
+}
+.opinions__box-customer-status {
+  color: var(--soft-pink);
+}
+.opinions__box-quote {
+  margin: 1em 0;
+  text-align: left;
+  color: var(--white);
+  line-height: 3rem;
+}
+
+@media (min-width: 576px) {
+  .heading__title {
+    font-size: 4.8rem;
+  }
+  .heading__text {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .opinions__box-quote {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+@media (min-width: 768px) {
+  .heading__title {
+    padding: 0 2em;
+  }
+  .heading__text {
+    padding: 0 3em;
+  }
+  .reviews {
+    flex-direction: row;
+  }
+  .reviews__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-left: 1em;
+  }
+  .opinions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  .opinions__box {
+    height: 280px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    padding: 10em;
+  }
+  .main {
+    position: relative;
+    padding: 0;
+  }
+  .heading {
+    position: absolute;
+    left: 0;
+    width: 35%;
+    height: 40vh;
+    text-align: left;
+  }
+  .heading__title {
+    padding: 0;
+    margin: 0 0 0.5em;
+  }
+  .heading__text {
+    padding: 0;
+    margin: 0;
+  }
+  .reviews {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: 40vh;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .reviews__box {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 50px;
+  }
+  .reviews__box--first {
+    align-self: start;
+    margin-bottom: 1.5em;
+  }
+  .reviews__box--second {
+    align-self: center;
+    margin-bottom: 1.5em;
+  }
+  .reviews__box--third {
+    align-self: end;
+  }
+  .reviews__box-stars {
+    margin-bottom: 0;
+    margin-right: 3em;
+  }
+  .reviews__box-stars-item {
+    margin-left: 0.2em;
+  }
+  .opinions {
+    position: absolute;
+    bottom: 15%;
+  }
+  .opinions__box {
+    width: 33%;
+    padding: 1.5em;
+    margin-bottom: 0;
+  }
+  .opinions__box--second {
+    margin-top: 2em;
+  }
+  .opinions__box--third {
+    margin-top: 4em;
+  }
+}/*# sourceMappingURL=main.css.map */

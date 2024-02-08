@@ -1,0 +1,270 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	--dark-grayish-magenta: hsl(303, 10%, 53%);
+	--light-grayish-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "League Spartan", sans-serif;
+}
+
+.main {
+	width: 100%;
+	padding: 2em;
+	min-height: 100vh;
+	z-index: 10;
+}
+
+.heading {
+	text-align: center;
+
+	&__title {
+		margin: 1.5em 0 1em;
+		font-size: 3.8rem;
+		color: var(--very-dark-magenta);
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+		color: var(--dark-grayish-magenta);
+	}
+}
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 3em 0;
+	text-align: center;
+
+	&__box {
+		width: 100%;
+		margin-bottom: 1em;
+		padding: 1em 0;
+		font-size: 1.6rem;
+		background-color: var(--light-grayish-magenta);
+		border-radius: 8px;
+
+		&-stars {
+			margin-bottom: 0.5em;
+
+			&-item {
+				margin-left: 0.2em;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+
+		&-text {
+			color: var(--very-dark-magenta);
+		}
+	}
+}
+
+.opinions {
+	&__box {
+		padding: 1em;
+		margin-bottom: 1em;
+		background-color: var(--very-dark-magenta);
+		font-size: 1.5rem;
+		border-radius: 10px;
+
+		&-customer {
+			display: flex;
+			flex-direction: row;
+
+			&-img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+			}
+			&-details {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin-left: 1em;
+			}
+			&-name {
+				margin-bottom: 0.4em;
+				color: var(--white);
+			}
+
+			&-status {
+				color: var(--soft-pink);
+			}
+		}
+
+		&-quote {
+			margin: 1em 0;
+			text-align: left;
+			color: var(--white);
+			line-height: 3rem;
+		}
+	}
+}
+
+// ***** MEDIA *****
+
+@media (min-width: 576px) {
+	.heading {
+		&__title {
+			font-size: 4.8rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+			line-height: 3rem;
+		}
+	}
+
+	.opinions {
+		&__box {
+			&-quote {
+				font-size: 2rem;
+				line-height: 2.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.heading {
+		&__title {
+			padding: 0 2em;
+		}
+
+		&__text {
+			padding: 0 3em;
+		}
+	}
+
+	.reviews {
+		flex-direction: row;
+
+		&__box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			margin-left: 1em;
+		}
+	}
+
+	.opinions {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+
+		&__box {
+			height: 280px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		padding: 10em;
+	}
+	.main {
+		position: relative;
+		padding: 0;
+	}
+
+	.heading {
+		position: absolute;
+		left: 0;
+		width: 35%;
+		height: 40vh;
+		text-align: left;
+
+		&__title {
+			padding: 0;
+			margin: 0 0 0.5em;
+			// font-size: 5.8rem;
+		}
+
+		&__text {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.reviews {
+		position: absolute;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		margin: 0;
+		padding: 0;
+		width: 60%;
+		height: 40vh;
+		height: fit-content;
+
+		&__box {
+			display: flex;
+			flex-direction: row;
+			width: 70%;
+			height: 50px;
+
+			&--first {
+				align-self: start;
+				margin-bottom: 1.5em;
+			}
+
+			&--second {
+				align-self: center;
+				margin-bottom: 1.5em;
+			}
+			&--third {
+				align-self: end;
+			}
+
+			&-stars {
+				margin-bottom: 0;
+				margin-right: 3em;
+
+				&-item {
+					margin-left: 0.2em;
+				}
+			}
+		}
+	}
+
+	.opinions {
+		position: absolute;
+		bottom: 15%;
+
+		&__box {
+			width: 33%;
+			padding: 1.5em;
+			margin-bottom: 0;
+
+			&--second {
+				margin-top: 2em;
+			}
+			&--third {
+				margin-top: 4em;
+			}
+		}
+	}
+}
